@@ -19,9 +19,11 @@
 13.删除字段：>alter table 表名称 drop 字段名;
 
 
+用户相关操作
 以下命令均需先以root身份登录mysql：mysql -uroot -p
-1.添加新用户：（1）创建新用户：> insert into mysql.user(Host,User,Password) values("localhost","user1",password("password1"));
-	      （2）刷新系统权限表：>flush privileges;
+1.添加新用户  
+	（1）创建新用户：> insert into mysql.user(Host,User,Password) values("localhost","user1",password("password1"));
+	（2）刷新系统权限表：>flush privileges;
 2.查看MySql当前所有的用户：>SELECT DISTINCT User FROM mysql.user;
 3.删除用户及其数据字典中包含的数据：>drop user 'xbb'@'localhost';
 

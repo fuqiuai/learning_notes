@@ -1,18 +1,18 @@
 *MySQL 是最流行的关系型数据库管理系统之一,属于 Oracle 旗下产品*
 
-####安装启动操作
+#### 安装启动操作
 1.安装mysql命令 ：$ `sudo apt-get install -y mysql-server`
 2.查看mysql的版本命令（注意-V是大写，不然会出现如下错误）：$ `mysql -V`
 3.启动mysql命令(关闭，重启等只需将start换成stop,restart等即可)：$`sudo service mysql start`
 4.登录mysql命令为：$ `mysql -u用户名 -p密码`
 
-####数据库操作
+#### 数据库操作
 1.查看数据库：> `show databases;` （注意分号“；”不要落下）
 2.新建一个数据库命令：> `create database 数据库名称;`
 &nbsp;&nbsp;&nbsp;删除一个数据库命令：> `drop database 数据库名称;`
 3.使用某个数据库：> `use 数据库名称;`
 
-####表操作
+#### 表操作
 1.查看表命令：> `show tables;`
 2.建立一个新表：> `create table 表名 （字段参数）;` 或 >`create table if not exists 表名（字段参数）；`
 &nbsp;&nbsp;&nbsp;删除一个旧表：> `drop table 表名；` 或 >`drop table if exists 表名；`
@@ -26,7 +26,7 @@
 6.删除字段：>`alter table 表名称 drop 字段名;`
 
 
-####用户相关操作
+#### 用户相关操作
 注：以下命令均需先以root身份登录mysql：`mysql -uroot -p`
 1.添加新用户
 	（1）创建新用户：> `insert into mysql.user(Host,User,Password) values("localhost","user1",password("password1"));`

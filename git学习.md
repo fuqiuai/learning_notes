@@ -1,6 +1,6 @@
 *git是分布式版本控制系统，跟踪管理的是修改，而非文件*
 
-####基本操作
+#### 基本操作
 1.安装git: `sudo apt-get install git`
   安装后设置： `git config --global user.name "Your Name"`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`git config --global user.email "email@example.com"`
@@ -21,13 +21,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;若确实要删除文件:`git rm <file>`，再commit
 &nbsp;&nbsp;&nbsp;&nbsp;若删错了，可恢复：`git checkout -- <file>`
 
-####远程仓库
+#### 远程仓库
 1.关联远程库:**`git remote add origin <远程库地址>`** (关联后远程库的名字就是origin)
 2.推送：**`git push (-u) origin master`** (-u第一次推送时加，master是本地分支)
 3.将远程分支与本地整合：**`git pull origin master`**
 4.克隆：**`git clone <远程库地址>`** (无需先进行关联)
 
-####分支管理
+#### 分支管理
 1.查看当前所有分支：`git branch`
 2.创建分支：`git branch <name>`
 3.切换分支：`git checkout <name>`

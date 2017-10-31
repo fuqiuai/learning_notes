@@ -24,16 +24,16 @@
 ## 远程仓库  
 1.关联远程库:**`git remote add origin <远程库地址>`** (关联后远程库的名字就是origin)  
 2.推送：**`git push (-u) origin BRANCH`** (-u第一次推送时加，将本地当前的分支推送到远程的BRANCH分支）  
-3.将远程BRANCH分支与本地整合：**`git pull origin BRANCH`** (等同于git fetch和git merge) 
+3.将远程BRANCH分支与本地整合：**`git pull origin BRANCH`** (等同于git fetch和git merge)  
 4.克隆：**`git clone <远程库地址>`** (无需先进行关联)  
 5.查看远程仓库地址：`git remote -v`
 
 ## 分支管理  
-1.查看当前所有分支：`git branch`   (`git branch -a`查看本地和远程的分支)
+1.查看当前所有分支：`git branch`   (`git branch -a`查看本地和远程的分支)  
 2.创建分支：`git branch <name>`  
 3.切换分支：`git checkout <name>`  
 4.创建+切换分支：`git checkout -b <name>`  
 5.合并某分支到当前分支：`git merge <name>`  
 6.删除分支：`git branch -d <name>`  
-8.分支冲突 （1）手动解决 （2）解决冲突后查看分支合并图：`git log --graph (--pretty=oneline)`  
-9.分支管理策略、Bug分支、Feature分支、多人协作（实际开发中用)参照[Git教程-廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)
+7.分支冲突 （1）手动解决 （2）解决冲突后查看分支合并图：`git log --graph (--pretty=oneline)`  
+8.分支管理策略、Bug分支、Feature分支、多人协作（实际开发中用)参照[Git教程-廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)

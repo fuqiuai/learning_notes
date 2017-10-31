@@ -5,6 +5,7 @@
 2.查看mysql的版本命令（注意-V是大写，不然会出现如下错误）：$ `mysql -V`  
 3.启动mysql命令(关闭，重启等只需将start换成stop,restart等即可)：$`sudo service mysql start`  
 4.登录mysql命令为：$ `mysql -u用户名 -p密码`
+5.连接远程数据库：`mysql -h <host> -P <port> -u<username> -p<password>`
 
 ## 数据库操作
 1.查看数据库：> `show databases;` （注意分号“；”不要落下）  

@@ -42,9 +42,9 @@
 |  | 1.11.5 Voting Classifier | 分类 | [sklearn.ensemble.VotingClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html#sklearn.ensemble.VotingClassifier) | 须指定基学习器 |
 | 1.12 [多类与多标签算法](http://scikit-learn.org/stable/modules/multiclass.html) |  |  |  | **sklearn中的分类算法都默认支持多类分类**，其中LinearSVC、 LogisticRegression和GaussianProcessClassifier在进行多类分类时需指定参数multi_class |
 | 1.13 [特征选择](http://scikit-learn.org/stable/modules/feature_selection.html) |  |  |  |  |
-|  1.14 [半监督](http://scikit-learn.org/stable/modules/label_propagation.html) |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| 1.14 [半监督](http://scikit-learn.org/stable/modules/label_propagation.html) | 1.14.1 Label Propagation | 分类/回归 | [sklearn.semi_supervised.LabelPropagation](http://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelPropagation.html#sklearn.semi_supervised.LabelPropagation)<br>[sklearn.semi_supervised.LabelSpreading](http://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelSpreading.html#sklearn.semi_supervised.LabelSpreading) |  |
+| 1.15 [保序回归](http://scikit-learn.org/stable/modules/isotonic.html) |  | 回归 | [sklearn.isotonic.IsotonicRegression](http://scikit-learn.org/stable/modules/generated/sklearn.isotonic.IsotonicRegression.html#sklearn.isotonic.IsotonicRegression) |  |
+| 1.16 [概率校准](http://scikit-learn.org/stable/modules/calibration.html) |  |  |  |  |
+| 1.17 [神经网络模型](http://scikit-learn.org/stable/modules/neural_networks_supervised.html) |  |  |  |  |
 |  |  |  |  |  |
 

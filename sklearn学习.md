@@ -1,14 +1,19 @@
 |大类 |  小类 | 适用问题 | 实现 | 说明 |
 |-------- | --------| -------- | -------- | -------- |
-|1.1 [广义线性模型](http://scikit-learn.org/stable/modules/linear_model.html)| 1.1.1 普通最小二乘法  | 线性回归问题 | [sklearn.linear_model.LinearRegression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression) | |
-| | 1.1.2 Ridge/岭回归 | 解决两类回归问题：<br>一是样本少于变量个数<br>二是变量间存在共线性 | [sklearn.linear_model.Ridge](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge) | 基于最小二乘法+L2正则化<br>可用RidgeCV进行调参 |
+|1.1 [广义线性模型](http://scikit-learn.org/stable/modules/linear_model.html)| 1.1.1 普通最小二乘法  | 线性回归 | [sklearn.linear_model.LinearRegression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression) | |
+| 本大类中的模型用于解决线性问题 | 1.1.2 Ridge/岭回归 | 解决两类回归问题：<br>一是样本少于变量个数<br>二是变量间存在共线性 | [sklearn.linear_model.Ridge](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge) | (1)基于最小二乘法+L2正则化<br>(2)可用RidgeCV进行调参 |
 | | 1.1.3 Lasso  | 参数较少的回归问题 | [sklearn.linear_model.Lasso](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso) | |
-| | 1.1.4 Multi-task Lasso  | 估计y值不是一元的回归问题 | [sklearn.linear_model.MultiTaskLasso](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskLasso.html#sklearn.linear_model.MultiTaskLasso) |
-| | 1.1.1 []()  | 回归 |  |
-| | 1.1.1 []()  | 回归 |  |
-| | 1.1.1 []()  | 回归 |  |
-| | 1.1.1 []()  | 回归 |  |
-| | 1.1.1 []()  | 回归 |  |
-| | 1.1.1 []()  | 回归 |  |
-| | 1.1.1 []()  | 回归 |  |
+| | 1.1.4 Multi-task Lasso  | y值不是一元的回归问题 | [sklearn.linear_model.MultiTaskLasso](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskLasso.html#sklearn.linear_model.MultiTaskLasso) |
+| | 1.1.5 Elastic Net  | 线性回归 | [sklearn.linear_model.ElasticNet](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html#sklearn.linear_model.ElasticNet) | 结合了Ridge和Lasso |
+| | 1.1.6 Multi-task Elastic Net  | y值不是一元的回归问题 | [sklearn.linear_model.MultiTaskElasticNet](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.MultiTaskElasticNet.html#sklearn.linear_model.MultiTaskElasticNet) |
+| | 1.1.7 Least Angle Regression(LARS)  | 适合高维数据的回归问题 | [sklearn.linear_model.Lars](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lars.html#sklearn.linear_model.Lars) |
+| | 1.1.8 LARS Lasso  | 适合高维数据的回归问题 | [sklearn.linear_model.LassoLars](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoLars.html#sklearn.linear_model.LassoLars) | 使用LARS算法实现的lasso模型 |
+| | 1.1.9 Orthogonal Matching Pursuit (OMP)  | 线性回归 | [sklearn.linear_model.OrthogonalMatchingPursuit](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.OrthogonalMatchingPursuit.html#sklearn.linear_model.OrthogonalMatchingPursuit) | 基于贪心算法实现 |
+| | 1.1.10 贝叶斯回归  | 概率回归问题 | [sklearn.linear_model.BayesianRidge](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.BayesianRidge.html#sklearn.linear_model.BayesianRidge) <br>[sklearn.linear_model.ARDRegression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ARDRegression.html#sklearn.linear_model.ARDRegression)| 优点： (1)适用于手边数据(2)可用于在估计过程中包含正规化参数 <br>缺点：耗时 |
+| | 1.1.11 Logistic regression  | 分类 | [sklearn.linear_model.LogisticRegression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression) |
+| | 1.1.12 SGD(随机梯度下降法)  | 分类<br>/回归 | [sklearn.linear_model.SGDClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier)<br>[sklearn.linear_model.SGDRegressor](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html#sklearn.linear_model.SGDRegressor) | 适用于大规模数据 |
+| | 1.1.13 Perceptron  | 分类 | [sklearn.linear_model.Perceptron](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html#sklearn.linear_model.Perceptron) | 适用于大规模数据 |
+| | 1.1.14 Passive Aggressive Algorithms  | 分类<br>/回归 | [sklearn.linear_model.PassiveAggressiveClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PassiveAggressiveClassifier.html#sklearn.linear_model.PassiveAggressiveClassifier)<br>[sklearn.linear_model.PassiveAggressiveRegressor](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.PassiveAggressiveRegressor.html#sklearn.linear_model.PassiveAggressiveRegressor) | 适用于大规模数据 |
+| | 1.1.15 Huber Regression  | 回归 | [sklearn.linear_model.HuberRegresso](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.HuberRegressor.html#sklearn.linear_model.HuberRegressor) | 能够处理数据中有异常值的情况
+| | 1.1.16 多项式回归  | 将线性模型应用到非线性数据中 | [sklearn.preprocessing.PolynomialFeatures](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html#sklearn.preprocessing.PolynomialFeatures) | 通过PolynomialFeatures将非线性特征转化成多项式形式，使其能够用线性模型处理
 

@@ -1,5 +1,13 @@
+### 目录
+### <a href="#1">1. 分类、回归</a>
+### <a href="#2">2. 降维</a>
+### <a href="#3">3. 模型评估与选择</a>
+### <a href="#4">4. 数据预处理</a>
+
+
 |大类 |  小类 | 适用问题 | 实现 | 说明 |
 |-------- | --------| -------- | -------- | -------- |
+| **<a name="1">分类、回归</a>** | | | | |
 |1.1 [广义线性模型](http://scikit-learn.org/stable/modules/linear_model.html)| 1.1.1 普通最小二乘法  |  回归 | [sklearn.linear_model.LinearRegression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression) | |
 | 注：本节中所有的回归模型皆为线性回归模型 | 1.1.2 Ridge/岭回归 | 回归 | [sklearn.linear_model.Ridge](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html#sklearn.linear_model.Ridge) | 解决两类回归问题：<br>一是样本少于变量个数<br>二是变量间存在共线性 |
 | | 1.1.3 Lasso  | 回归 | [sklearn.linear_model.Lasso](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html#sklearn.linear_model.Lasso) | 适合特征较少的数据 |
@@ -23,13 +31,13 @@
 |  | 1.4.2 SVR,NuSVR,LinearSVR | 回归 | [sklearn.svm.SVR](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html#sklearn.svm.SVR)<br>[sklearn.svm.NuSVR](http://scikit-learn.org/stable/modules/generated/sklearn.svm.NuSVC.html#sklearn.svm.NuSVR)<br>[sklearn.svm.LinearSVR](http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVR)| 同上，将"分类"变成"回归"即可 |
 |  | 1.4.3 OneClassSVM |  | [sklearn.svm.OneClassSVM](http://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html#sklearn.svm.OneClassSVM)| 无监督实现异常值检测 |
 | 1.5 [随机梯度下降](http://scikit-learn.org/stable/modules/sgd.html) | 同1.1.12 |  |  |  |
-| 1.6 [最近邻](http://scikit-learn.org/stable/modules/neighbors.html) | 1.6.1 Unsupervised Nearest Neighbors |  | [sklearn.neighbors.NearestNeighbors](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors) | 无监督实现K近邻的寻找 |
+| 1.6 [最近邻](http://scikit-learn.org/stable/modules/neighbors.html) | 1.6.1 Unsupervised Nearest Neighbors | -- | [sklearn.neighbors.NearestNeighbors](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors) | 无监督实现K近邻的寻找 |
 | | 1.6.2 Nearest Neighbors Classification | 分类 | [sklearn.neighbors.KNeighborsClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier)<br>[sklearn.neighbors.RadiusNeighborsClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsClassifier.html#sklearn.neighbors.RadiusNeighborsClassifier) | (1)不太适用于高维数据<br>(2)两种实现只是距离度量不一样，后者更适合非均匀的采样 |
 | | 1.6.3 Nearest Neighbors Regression| 回归 | [sklearn.neighbors.KNeighborsRegressor](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html#sklearn.neighbors.KNeighborsRegressor)<br>[sklearn.neighbors.RadiusNeighborsRegressor](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsRegressor.html#sklearn.neighbors.RadiusNeighborsRegressor) | 同上 |
 | | 1.6.5 Nearest Centroid Classifier | 分类 | [sklearn.neighbors.NearestCentroid](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestCentroid.html#sklearn.neighbors.NearestCentroid) | 每个类对应一个质心，测试样本被分类到距离最近的质心所在的类别 |
 | 1.7 [高斯过程(GP/GPML)](http://scikit-learn.org/stable/modules/gaussian_process.html) | 1.7.1 GPR | 回归 | [sklearn.gaussian_process.<br>GaussianProcessRegressor](http://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html#sklearn.gaussian_process.GaussianProcessRegressor) | 与KRR一样使用了核技巧 |
 |  | 1.7.3 GPC | 分类 | [sklearn.gaussian_process.<br>GaussianProcessClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.GaussianProcessClassifier.html#sklearn.gaussian_process.GaussianProcessClassifier) |  |
-| 1.8 [交叉分解](http://scikit-learn.org/stable/modules/cross_decomposition.html) | 实现算法：CCA和PLS |  |  | 用来计算两个多元数据集的线性关系，当预测数据比观测数据有更多的变量时，用PLS更好 |
+| 1.8 [交叉分解](http://scikit-learn.org/stable/modules/cross_decomposition.html) | 实现算法：CCA和PLS | -- | -- | 用来计算两个多元数据集的线性关系，当预测数据比观测数据有更多的变量时，用PLS更好 |
 | 1.9 [朴素贝叶斯](http://scikit-learn.org/stable/modules/naive_bayes.html) | 1.9.1 高斯朴素贝叶斯 | 分类 | [sklearn.naive_bayes.GaussianNB](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html#sklearn.naive_bayes.GaussianNB) | 处理特征是连续型变量的情况 |
 |  | 1.9.2 多项式朴素贝叶斯 | 分类 | [sklearn.naive_bayes.MultinomialNB](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB) | 最常见，要求特征是离散数据 |
 |  | 1.9.3 伯努利朴素贝叶斯 | 分类 | [sklearn.naive_bayes.BernoulliNB](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html#sklearn.naive_bayes.BernoulliNB) | 要求特征是离散的，且为布尔类型，即true和false，或者1和0 |
@@ -40,11 +48,35 @@
 | | 1.11.3 AdaBoost | 分类/回归 | [sklearn.ensemble.AdaBoostClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html#sklearn.ensemble.AdaBoostClassifier)<br>[sklearn.ensemble.AdaBoostRegressor](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostRegressor.html#sklearn.ensemble.AdaBoostRegressor) | 可以指定基学习器，默认为决策树 |
 | 号外：最近特别火的两个梯度提升算法，LightGBM和XGBoost<br>(sklearn中没有集成)  | 1.11.4 Gradient Tree Boosting| 分类/回归 | GBDT:<BR>[sklearn.ensemble.GradientBoostingClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html#sklearn.ensemble.GradientBoostingClassifier)<br>GBRT:<BR>[sklearn.ensemble.GradientBoostingRegressor](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html#sklearn.ensemble.GradientBoostingRegressor) | 基学习器为决策树 |
 |  | 1.11.5 Voting Classifier | 分类 | [sklearn.ensemble.VotingClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.VotingClassifier.html#sklearn.ensemble.VotingClassifier) | 须指定基学习器 |
-| 1.12 [多类与多标签算法](http://scikit-learn.org/stable/modules/multiclass.html) |  |  |  | **sklearn中的分类算法都默认支持多类分类**，其中LinearSVC、 LogisticRegression和GaussianProcessClassifier在进行多类分类时需指定参数multi_class |
-| 1.13 [特征选择](http://scikit-learn.org/stable/modules/feature_selection.html) |  |  |  |  |
+| 1.12 [多类与多标签算法](http://scikit-learn.org/stable/modules/multiclass.html) | -- | -- | -- | **sklearn中的分类算法都默认支持多类分类**，其中LinearSVC、 LogisticRegression和GaussianProcessClassifier在进行多类分类时需指定参数multi_class |
+| 1.13 [特征选择](http://scikit-learn.org/stable/modules/feature_selection.html) | 1.13.1 过滤法之方差选择法 | 特征选择 | [sklearn.feature_selection.VarianceThreshold](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.VarianceThreshold.html#sklearn.feature_selection.VarianceThreshold) | 特征选择方法分为3种：过滤法、包裹法和嵌入法。过滤法不用考虑后续学习器 |
+|  | 1.13.2 过滤法之卡方检验 | 特征选择 | [sklearn.feature_selection.SelectKBest](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn.feature_selection.SelectKBest) | |
+|  | 1.13.3 包裹法之递归特征消除法 | 特征选择 | [sklearn.feature_selection.RFE](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html#sklearn.feature_selection.RFE) | 包裹法需考虑后续学习器，参数中需输入基学习器 |
+|  | 1.13.4 嵌入法 | 特征选择 | [sklearn.feature_selection.SelectFromModel](http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFromModel.html#sklearn.feature_selection.SelectFromModel) | 嵌入法是过滤法和嵌入法的结合，参数中也需输入基学习器 |
 | 1.14 [半监督](http://scikit-learn.org/stable/modules/label_propagation.html) | 1.14.1 Label Propagation | 分类/回归 | [sklearn.semi_supervised.LabelPropagation](http://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelPropagation.html#sklearn.semi_supervised.LabelPropagation)<br>[sklearn.semi_supervised.LabelSpreading](http://scikit-learn.org/stable/modules/generated/sklearn.semi_supervised.LabelSpreading.html#sklearn.semi_supervised.LabelSpreading) |  |
-| 1.15 [保序回归](http://scikit-learn.org/stable/modules/isotonic.html) |  | 回归 | [sklearn.isotonic.IsotonicRegression](http://scikit-learn.org/stable/modules/generated/sklearn.isotonic.IsotonicRegression.html#sklearn.isotonic.IsotonicRegression) |  |
-| 1.16 [概率校准](http://scikit-learn.org/stable/modules/calibration.html) |  |  |  |  |
-| 1.17 [神经网络模型](http://scikit-learn.org/stable/modules/neural_networks_supervised.html) |  |  |  |  |
-|  |  |  |  |  |
-
+| 1.15 [保序回归](http://scikit-learn.org/stable/modules/isotonic.html) | -- | 回归 | [sklearn.isotonic.IsotonicRegression](http://scikit-learn.org/stable/modules/generated/sklearn.isotonic.IsotonicRegression.html#sklearn.isotonic.IsotonicRegression) |  |
+| 1.16 [概率校准](http://scikit-learn.org/stable/modules/calibration.html) | -- | -- | -- | 在执行分类时，获得预测的标签的概率 |
+| 1.17 [神经网络模型](http://scikit-learn.org/stable/modules/neural_networks_supervised.html) | （待写） |  |  |  |
+| **<a name="2">降维</a>** |  | | | |
+| 2.5 [降维](http://scikit-learn.org/stable/modules/decomposition.html#decompositions) | 2.5.1 主成分分析 | 降维 | PCA:<br>[sklearn.decomposition.PCA](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html#sklearn.decomposition.PCA)<br>IPCA:<br>[sklearn.decomposition.IncrementalPCA](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html#sklearn.decomposition.IncrementalPCA)<br>KPCA:<br>[sklearn.decomposition.KernelPCA](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA)<BR>SPCA:<br>[sklearn.decomposition.SparsePCA](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparsePCA.html#sklearn.decomposition.SparsePCA) | (1)IPCA比PCA有更好的内存效率，适合超大规模降维。<br>(2)KPCA可以进行非线性降维<br>(3)SPCA是PCA的变体，降维后返回最佳的稀疏矩阵 |
+|  | 2.5.2 截断奇异值分解 | 降维 | [sklearn.decomposition.TruncatedSVD](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html#sklearn.decomposition.TruncatedSVD)| 可以直接对scipy.sparse矩阵处理 |
+|  | 2.5.3 字典学习 | -- | [sklearn.decomposition.SparseCoder](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparseCoder.html#sklearn.decomposition.SparseCoder)<br>[sklearn.decomposition.DictionaryLearning](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.DictionaryLearning.html#sklearn.decomposition.DictionaryLearning) | SparseCoder实现稀疏编码，DictionaryLearning实现字典学习 |
+| **<a name="3">模型评估与选择</a>** |  |  | | |
+| 3.1 [交叉验证/CV](http://scikit-learn.org/stable/modules/cross_validation.html) | 3.1.1 分割训练集和测试集 | -- | [sklearn.model_selection.train_test_split](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_split) | |
+| | 3.1.2 通过交叉验证评估score |--| [sklearn.model_selection.cross_val_score](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html#sklearn.model_selection.cross_val_score) | score对应性能度量，分类问题默认为accuracy_score，回归问题默认为r2_score |
+| | 3.1.3 留一法LOO | -- | [sklearn.model_selection.LeaveOneOut](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html#sklearn.model_selection.LeaveOneOut) | CV的特例 |
+| | 3.1.4 留P法LPO | -- | [sklearn.model_selection.LeavePOut](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeavePOut.html#sklearn.model_selection.LeavePOut) | CV的特例 |
+| 3.2 [调参](http://scikit-learn.org/stable/modules/grid_search.html) | 3.2.1 网格搜索 | -- | [sklearn.model_selection.GridSearchCV](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html#sklearn.model_selection.GridSearchCV) | 最常用的调参方法。可传入学习器、学习器参数范围、性能度量score(默认为accuracy_score或r2_score )等 |
+| | 3.2.2 随机搜索 | -- | [sklearn.model_selection.RandomizedSearchCV](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html#sklearn.model_selection.RandomizedSearchCV) | 参数传入同上 |
+| 3.3 [性能度量](http://scikit-learn.org/stable/modules/model_evaluation.html) |  3.3.1 分类度量 | -- | -- | 对应交叉验证和调参中的score |
+| | 3.3.2 回归度量 | -- | -- | |
+| | 3.3.3 聚类度量 | -- | -- | |
+| 3.4 [模型持久性](http://scikit-learn.org/stable/modules/model_persistence.html) | -- | -- | -- | 使用pickle存放模型，可以使模型不用重复训练 |
+| 3.5 [验证曲线](http://scikit-learn.org/stable/modules/learning_curve.html#learning-curve)| 3.5.1 验证曲线 | -- | [sklearn.model_selection.validation_curve](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.validation_curve.html#sklearn.model_selection.validation_curve) | 横轴为某个参数的值，纵轴为模型得分 |
+| | 3.5.2 学习曲线 | -- | [sklearn.model_selection.learning_curve](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.learning_curve.html#sklearn.model_selection.learning_curve) | 横轴为训练数据大小，纵轴为模型得分 |
+| **<a name="4">数据预处理</a>** |  |  | | |
+| |  |  | | |
+| |  |  | | |
+| |  |  | | |
+| |  |  | | |
+| |  |  | | |

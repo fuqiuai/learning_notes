@@ -29,7 +29,7 @@
 | 1.3 [核岭回归](http://scikit-learn.org/stable/modules/kernel_ridge.html) | 简称KRR | 回归 | [sklearn.kernel_ridge.KernelRidge](http://scikit-learn.org/stable/modules/generated/sklearn.kernel_ridge.KernelRidge.html#sklearn.kernel_ridge.KernelRidge) | 将核技巧应用到岭回归(1.1.2)中，以实现非线性回归 |
 | 1.4 [支持向量机](http://scikit-learn.org/stable/modules/svm.html) | 1.4.1 SVC,NuSVC,LinearSVC | 分类 | [sklearn.svm.SVC](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)<br>[sklearn.svm.NuSVC](http://scikit-learn.org/stable/modules/generated/sklearn.svm.NuSVC.html#sklearn.svm.NuSVC)<br>[sklearn.svm.LinearSVC](http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC)| SVC可用于非线性分类，可指定核函数；<br>NuSVC与SVC唯一的不同是可控制支持向量的个数;<br>LinearSVC用于线性分类|
 |  | 1.4.2 SVR,NuSVR,LinearSVR | 回归 | [sklearn.svm.SVR](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html#sklearn.svm.SVR)<br>[sklearn.svm.NuSVR](http://scikit-learn.org/stable/modules/generated/sklearn.svm.NuSVC.html#sklearn.svm.NuSVR)<br>[sklearn.svm.LinearSVR](http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVR)| 同上，将"分类"变成"回归"即可 |
-|  | 1.4.3 OneClassSVM |  | [sklearn.svm.OneClassSVM](http://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html#sklearn.svm.OneClassSVM)| 无监督实现异常值检测 |
+|  | 1.4.3 OneClassSVM | 异常检测 | [sklearn.svm.OneClassSVM](http://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html#sklearn.svm.OneClassSVM)| 无监督实现异常值检测 |
 | 1.5 [随机梯度下降](http://scikit-learn.org/stable/modules/sgd.html) | 同1.1.12 |  |  |  |
 | 1.6 [最近邻](http://scikit-learn.org/stable/modules/neighbors.html) | 1.6.1 Unsupervised Nearest Neighbors | -- | [sklearn.neighbors.NearestNeighbors](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors) | 无监督实现K近邻的寻找 |
 | | 1.6.2 Nearest Neighbors Classification | 分类 | [sklearn.neighbors.KNeighborsClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier)<br>[sklearn.neighbors.RadiusNeighborsClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.RadiusNeighborsClassifier.html#sklearn.neighbors.RadiusNeighborsClassifier) | (1)不太适用于高维数据<br>(2)两种实现只是距离度量不一样，后者更适合非均匀的采样 |
@@ -75,8 +75,16 @@
 | 3.5 [验证曲线](http://scikit-learn.org/stable/modules/learning_curve.html#learning-curve)| 3.5.1 验证曲线 | -- | [sklearn.model_selection.validation_curve](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.validation_curve.html#sklearn.model_selection.validation_curve) | 横轴为某个参数的值，纵轴为模型得分 |
 | | 3.5.2 学习曲线 | -- | [sklearn.model_selection.learning_curve](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.learning_curve.html#sklearn.model_selection.learning_curve) | 横轴为训练数据大小，纵轴为模型得分 |
 | **<a name="4">数据预处理</a>** |  |  | | |
-| |  |  | | |
-| |  |  | | |
-| |  |  | | |
-| |  |  | | |
-| |  |  | | |
+| 4.3 [数据预处理](http://scikit-learn.org/stable/modules/preprocessing.html#preprocessing) | 4.3.1 标准化 | 数据预处理 | 标准化:<br>[sklearn.preprocessing.scale](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.scale.html#sklearn.preprocessing.scale)<br>[sklearn.preprocessing.StandardScaler](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html#sklearn.preprocessing.StandardScaler) | scale与StandardScaler都是将将特征转化成标准正态分布(即均值为0，方差为1),且都可以处理scipy.sparse矩阵，但一般选择后者 |
+| |  | 数据预处理 | <br>区间缩放:<br>[sklearn.preprocessing.MinMaxScaler](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler)<br>[sklearn.preprocessing.MaxAbsScale](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MaxAbsScaler.html#sklearn.preprocessing.MaxAbsScaler) | MinMaxScaler默认为0-1缩放，MaxAbsScaler可以处理scipy.sparse矩阵 |
+| | 4.3.2 非线性转换 | 数据预处理 | [sklearn.preprocessing.QuantileTransformer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.QuantileTransformer.html#sklearn.preprocessing.QuantileTransformer) | 可以更少的受异常值的影响 |
+| | 4.3.3 归一化 | 数据预处理 | [sklearn.preprocessing.Normalizer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html#sklearn.preprocessing.Normalizer) | 将行向量转换为单位向量，目的在于样本向量在点乘运算或其他核函数计算相似性时，拥有统一的标准 |
+| | 4.3.4 二值化 | 数据预处理 | [sklearn.preprocessing.Binarizer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Binarizer.html#sklearn.preprocessing.Binarizer) | 通过设置阈值对定量特征处理，获取布尔值 |
+| | 4.3.5 哑编码 | 数据预处理 | [sklearn.preprocessing.OneHotEncoder](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder) | 数据预处理 | 对定性特征编码。也可用pandas.get_dummies实现 |
+| | 4.3.6 缺失值计算 | 数据预处理 | [sklearn.preprocessing.Imputer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Imputer.html#sklearn.preprocessing.Imputer) | 可用三种方式填充缺失值，均值（默认）、中位数和众数。也可用pandas.fillna实现 |
+| | 4.3.7 多项式转换 | 数据预处理 | [sklearn.preprocessing.PolynomialFeatures](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html#sklearn.preprocessing.PolynomialFeatures) | |
+| | 4.3.8 自定义转换 | 数据预处理 | [sklearn.preprocessing.FunctionTransformer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html#sklearn.preprocessing.FunctionTransformer) | |
+| | | | | |
+| | | | | |
+
+

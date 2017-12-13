@@ -80,7 +80,7 @@
 | | 4.3.2 非线性转换 | 数据预处理 | [sklearn.preprocessing.QuantileTransformer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.QuantileTransformer.html#sklearn.preprocessing.QuantileTransformer) | 可以更少的受异常值的影响 |
 | | 4.3.3 归一化 | 数据预处理 | [sklearn.preprocessing.Normalizer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Normalizer.html#sklearn.preprocessing.Normalizer) | 将行向量转换为单位向量，目的在于样本向量在点乘运算或其他核函数计算相似性时，拥有统一的标准 |
 | | 4.3.4 二值化 | 数据预处理 | [sklearn.preprocessing.Binarizer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Binarizer.html#sklearn.preprocessing.Binarizer) | 通过设置阈值对定量特征处理，获取布尔值 |
-| | 4.3.5 哑编码 | 数据预处理 | [sklearn.preprocessing.OneHotEncoder](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder) | 数据预处理 | 对定性特征编码。也可用pandas.get_dummies实现 |
+| | 4.3.5 哑编码 | 数据预处理 | [sklearn.preprocessing.OneHotEncoder](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html#sklearn.preprocessing.OneHotEncoder) | 对定性特征编码。也可用pandas.get_dummies实现 |
 | | 4.3.6 缺失值计算 | 数据预处理 | [sklearn.preprocessing.Imputer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Imputer.html#sklearn.preprocessing.Imputer) | 可用三种方式填充缺失值，均值（默认）、中位数和众数。也可用pandas.fillna实现 |
 | | 4.3.7 多项式转换 | 数据预处理 | [sklearn.preprocessing.PolynomialFeatures](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html#sklearn.preprocessing.PolynomialFeatures) | |
 | | 4.3.8 自定义转换 | 数据预处理 | [sklearn.preprocessing.FunctionTransformer](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.FunctionTransformer.html#sklearn.preprocessing.FunctionTransformer) | |

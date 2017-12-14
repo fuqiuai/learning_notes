@@ -1,5 +1,5 @@
-import xgboost as xgb
 from sklearn import datasets
+from xgboost.sklearn  import XGBClassifier
 
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
@@ -10,20 +10,13 @@ mnist = datasets.load_digits()
 X_train, X_test, y_train, y_test = train_test_split(
      mnist.data, mnist.target, test_size=0.33, random_state=42)
 
-X_train = xgb.DMatrix(X_train, y_train)
-X_test = xgb.DMatrix(X_test)
-# 设置参数
-param = {'max_depth':2, 
-         'eta':1, 
-         'silent':0, 
-         'objective': 'multi:softmax', 
-         'num_class':10 }
 
-num_round = 50 # 迭代次数
+# 设置参数
+clf = XGBClassifier(max_depth=2,learning_rate=1)
 
 # train and predict
-bst = xgb.train(param, X_train, num_round)
-preds = bst.predict(X_test)
+clf.fit(X_train, y_train)
+preds = clf.predict(X_test)
 
 # return score
 score = accuracy_score(y_test, preds)

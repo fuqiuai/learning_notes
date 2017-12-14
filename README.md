@@ -7,3 +7,5 @@
 - Linux下使用MySQL参考[Linux系统下Mysql使用简单教程](http://www.jb51.net/article/84399.htm)
 
 - sklearn学习参考[sklearn官网](http://scikit-learn.org/stable/index.html)
+
+- XGBoost学习参考[XGBoost官网](http://xgboost.readthedocs.io/en/latest/////python/python_api.html#module-xgboost.sklearn)

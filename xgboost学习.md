@@ -65,6 +65,6 @@ You can also reduce stepsize **eta**, but needs to remember to increase **num_ro
 ||**num_round**||| boosting的轮数/迭代次数|
 
 xgb使用sklearn接口会改变的函数名是：[官网](http://xgboost.readthedocs.io/en/latest/////python/python_api.html#module-xgboost.sklearn)
-eta -> learning_rate
-lambda -> reg_lambda
-alpha -> reg_alpha
+- eta -> learning_rate
+- lambda -> reg_lambda
+- alpha -> reg_alpha

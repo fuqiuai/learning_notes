@@ -1,6 +1,8 @@
 ## XGBoost调参指南
 [参考-官网](http://xgboost.readthedocs.io/en/latest/////////how_to/param_tuning.html)
-### 防止过拟合
+### 方法1
+可按照**max_depth, min_child_weight colsamplt_bytree,eta**的顺序一个一个调，每次调的时候其他参数保持不变
+### 方法2:防止过拟合
 When you observe high training accuracy, but low tests accuracy, it is likely that you encounter overfitting problem.
 
 There are in general two ways that you can control overfitting in xgboost

@@ -9,3 +9,5 @@
 - sklearn学习参考[sklearn官网](http://scikit-learn.org/stable/index.html)
 
 - XGBoost学习参考[XGBoost官网](http://xgboost.readthedocs.io/en/latest/////python/python_api.html#module-xgboost.sklearn)
+
+- LightGBM学习参考[LightGBM官网](https://lightgbm.readthedocs.io/en/latest/index.html#) 

@@ -1,6 +1,6 @@
 # learning_notes
 
-一些个人的学习笔记,不具备任何参考价值  
+一些个人的学习笔记
 
 - git学习参考[Git教程-廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)
 

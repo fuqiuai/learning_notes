@@ -11,3 +11,5 @@
 - XGBoost学习参考[XGBoost官网](http://xgboost.readthedocs.io/en/latest/////python/python_api.html#module-xgboost.sklearn)
 
 - LightGBM学习参考[LightGBM官网](https://lightgbm.readthedocs.io/en/latest/index.html#) 
+
+- tensorflow入门学习[TensorFlow_Started.ipynb](https://github.com/fuqiuai/learning_notes/blob/master/TensorFlow_Started.ipynb)

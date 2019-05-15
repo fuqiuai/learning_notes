@@ -13,7 +13,7 @@
 &nbsp;&nbsp;&nbsp;查看命令历史：`git reflog`  
 &nbsp;&nbsp;&nbsp;回到上一版本：`git reset --hard HEAD^ `  
 5.工作区和版本库间的关系  
-&nbsp;&nbsp;&nbsp;&nbsp;![工作区和版本库](https://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0)  
+&nbsp;&nbsp;&nbsp;&nbsp;![工作区和版本库](https://static.liaoxuefeng.com/files/attachments/919020037470528/0)  
 6.撤销修改  
 &nbsp;&nbsp;&nbsp;修改了但是未git add: `git checkout -- <file>`  
 &nbsp;&nbsp;&nbsp;git add了但未git commit: `git reset HEAD <file>`  

@@ -25,6 +25,7 @@
 1.关联远程库:**`git remote add origin <远程库地址>`** (关联后远程库的名字就是origin)  
 2.推送：**`git push (-u) origin BRANCH`** (-u第一次推送时加，将本地当前的分支推送到远程的BRANCH分支）  
          `git push origin 本地分支名:远程分支名` (将本地某分支推送到远程某分支)
+         
 3.将远程BRANCH分支与本地整合：**`git pull origin BRANCH`** (等同于git fetch和git merge)  
 4.克隆：**`git clone <远程库地址>`** (无需先进行关联)  
 5.查看远程仓库地址：`git remote -v`

@@ -27,6 +27,8 @@
          `git push origin 本地分支名:远程分支名` (将本地某分支推送到远程某分支)
          
 3.将远程BRANCH分支与本地整合：**`git pull origin BRANCH`** (等同于git fetch和git merge)  
+         `git pull origin 远程分支名:本地分支名`
+
 4.克隆：**`git clone <远程库地址>`** (无需先进行关联)  
 5.查看远程仓库地址：`git remote -v`
 

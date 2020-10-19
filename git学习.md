@@ -41,7 +41,11 @@
 6.删除分支：`git branch -d <name>`  
 7.分支冲突 （1）手动解决 （2）解决冲突后查看分支合并图：`git log --graph (--pretty=oneline)`  
 8.分支管理策略、Bug分支、Feature分支、多人协作（实际开发中用)参照[Git教程-廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/)
+
 9.比较两个分支的差异：
+
 `git diff branch1 branch2 --stat`   //显示出所有有差异的文件列表
+
 `git diff branch1 branch2 文件名(带路径)`   //显示指定文件的详细差异
+
 `git diff branch1 branch2`      //显示出所有有差异的文件的详细差异

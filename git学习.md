@@ -49,3 +49,7 @@
 `git diff branch1 branch2 文件名(带路径)`   //显示指定文件的详细差异
 
 `git diff branch1 branch2`      //显示出所有有差异的文件的详细差异
+
+10. 查看本地分支与远程分支的关联关系：`git branch -vv`
+
+11. 拉取远程分支并创建本地分支 `git checkout -b 本地分支名x origin/远程分支名x` （采用此种方法建立的本地分支会和远程分支建立映射关系）

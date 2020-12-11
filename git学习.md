@@ -52,4 +52,6 @@
 
 10. 查看本地分支与远程分支的关联关系：`git branch -vv`
 
-11. 拉取远程分支并创建本地分支 `git checkout -b 本地分支名x origin/远程分支名x` （采用此种方法建立的本地分支会和远程分支建立映射关系）
+11. 更新远程分支列表： `git remote update origin --prune`
+
+12. 拉取远程分支并创建本地分支 `git checkout -b 本地分支名x origin/远程分支名x` （采用此种方法建立的本地分支会和远程分支建立映射关系）

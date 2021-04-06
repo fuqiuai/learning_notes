@@ -55,3 +55,6 @@
 11. 更新远程分支列表： `git remote update origin --prune`
 
 12. 拉取远程分支并创建本地分支 `git checkout -b 本地分支名x origin/远程分支名x` （采用此种方法建立的本地分支会和远程分支建立映射关系）
+
+## 其他
+1. git切换分支时会把未add或未commit的内容带过去；因为工作区和暂存区是公共的，未add和未commit的内容不属于任何一个分支。
